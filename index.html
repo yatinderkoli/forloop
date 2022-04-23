@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+    <style>
+        h2 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JavaScript Nested for Loops</h2>
+    <p id="forloop"></p><br>
+    <h2>JavaScript Nested while Loops</h2>
+    <p id="whileloop"></p><br>
+
+    <script>
+        //Nested For Loop
+        let forstr = "";
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                forstr += j + " ";
+            }
+            forstr += "<br>";
+            document.getElementById("forloop").innerHTML = forstr;
+        }
+
+        //Nested while loop
+        let whilestr = "";
+        let x = 1;
+        while (x <= 5) {
+            let y = 1;
+            while (y <= x) {
+                whilestr += y + " ";
+                y++;
+            }
+            whilestr += "<br>";
+            document.getElementById("whileloop").innerHTML = whilestr;
+            x++;
+        }
+
+
+    </script>
+</body>
+
+</html>
